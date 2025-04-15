@@ -20,7 +20,6 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.ai:spring-ai-mcp-server-spring-boot-starter:1.0.0-M6'
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.3'
     implementation 'io.github.classgraph:classgraph:4.8.179'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
