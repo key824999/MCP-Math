@@ -4,13 +4,78 @@
 
 It is designed to be used by any AI agent or tool host that supports the MCP specification.
 
-## Features
+## 🧠 Features by Category
 
-- `sqrt(num)` – Square root
-- `pow(num, n)` – Power
-- `abs(num)`, `round(num)`, `log(num)`, `log10(num)`
-- `sin(radians)`, `cos(radians)`, `tan(radians)`
-- `max(a, b)`, `min(a, b)`
+### 📘 Basic Math
+- `sqrt(double num)` – Square root
+- `square(double num)` – Square
+- `pow(double base, double exponent)` – Exponentiation
+- `abs(double num)` – Absolute value
+- `log(double num)` – Natural log
+- `log10(double num)` – Log base 10
+- `sin(double radians)`, `cos(double radians)`, `tan(double radians)` – Trigonometric functions
+- `round(double num)` – Rounding
+- `max(double a, double b)`, `min(double a, double b)` – Max/Min
+- `mod(double a, double b)` – Modulo
+- `ceil(double num)`, `floor(double num)` – Ceiling/Floor
+- `gcd(int a, int b)`, `lcm(int a, int b)` – GCD/LCM
+- `degToRad(double degrees)`, `radToDeg(double radians)` – Angle conversions
+- `factorial(int n)` – Factorial
+
+### 📊 Statistics
+- `mean(List<Double> numbers)` – Mean
+- `median(List<Double> numbers)` – Median
+- `mode(List<Double> numbers)` – Mode
+- `range(List<Double> numbers)` – Range
+- `variance(List<Double> numbers)` – Sample Variance
+- `standardDeviation(List<Double> numbers)` – Sample Standard Deviation
+- `sum(List<Double> numbers)` – Sum
+- `count(List<Double> numbers)` – Count
+
+### 🔢 Combinatorics
+- `factorial(int n)` – Factorial
+- `nCr(int n, int r)` – Combinations
+- `nPr(int n, int r)` – Permutations
+- `multiFactorial(int n, int k)` – k-step Factorial
+- `catalanNumber(int n)` – Catalan Number
+
+### 🔍 Prime Numbers
+- `isPrime(int num)` – Prime check
+- `nextPrime(int num)` – Next prime
+- `countPrimesUpTo(int n)` – Prime count up to n
+- `listPrimesInRange(int start, int end)` – List primes in range
+- `primeFactors(int n)` – Prime factorization
+
+### 🔁 Sequences
+- `fibonacci(int n)` – Fibonacci n-th term
+- `arithmeticTerm(long a, long d, int n)` – Arithmetic n-th term
+- `geometricTerm(long a, long r, int n)` – Geometric n-th term
+- `sumArithmeticSeries(long a, long d, int n)` – Arithmetic sum
+- `sumGeometricSeries(long a, long r, int n)` – Geometric sum
+- `isFibonacci(long num)` – Fibonacci membership
+- `sumFibonacci(int n)` – Fibonacci sum
+- `generateArithmeticSequence(long a, long d, int n)` – Arithmetic list
+- `generateGeometricSequence(long a, long r, int n)` – Geometric list
+- `nthTriangularNumber(int n)` – Triangular number
+
+### 📐 Geometry
+#### Circle
+- `circleArea(double radius)` – Circle area
+- `circleCircumference(double radius)` – Circle circumference
+
+#### Triangle
+- `triangleArea(double base, double height)` – Triangle area (base/height)
+- `trianglePerimeter(double a, double b, double c)` – Triangle perimeter
+- `heronArea(double a, double b, double c)` – Triangle area (Heron's formula)
+- `pythagorean(double a, double b)` – Hypotenuse (Pythagorean theorem)
+
+#### Rectangle
+- `rectangleArea(double width, double height)` – Rectangle area
+- `rectanglePerimeter(double width, double height)` – Rectangle perimeter
+
+#### Coordinates
+- `distance2D(double x1, double y1, double x2, double y2)` – 2D distance
+- `distance3D(double x1, double y1, double z1, double x2, double y2, double z2)` – 3D distance
 
 All functions are annotated with `@Tool` and are auto-discovered by MCP hosts.
 

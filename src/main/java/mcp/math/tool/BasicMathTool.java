@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.math.BigInteger;
 
 @Component
-public class MathTool {
+public class BasicMathTool {
 
     @Tool(description = "Returns the square root of the given number. For example, sqrt(9) returns 3.")
     public double sqrt(double num) {
