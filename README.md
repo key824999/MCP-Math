@@ -19,10 +19,8 @@ All functions are annotated with `@Tool` and are auto-discovered by MCP hosts.
 To install this tool using the MCP CLI:
 
 ```bash
-npx mcp add https://raw.githubusercontent.com/YOUR_USERNAME/mcp-math/main/manifest.json
+npx mcp add https://raw.githubusercontent.com/key824999/MCP-Math/refs/heads/master/manifest.json
 ```
-
-> Replace `YOUR_USERNAME` with your actual GitHub username.
 
 ## Usage Examples
 
@@ -64,4 +62,5 @@ MIT
 
 ## Author
 
-GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- Email: wjdwo951219@gmail.com
+- GitHub: [@key824999](https://github.com/key824999)
