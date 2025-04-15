@@ -4,7 +4,7 @@
 
 It is designed to be used by any AI agent or tool host that supports the MCP specification.
 
-## 🧠 Features by Category
+## Features by Category
 
 ### 📘 Basic Math
 - `sqrt(double num)` – Square root
@@ -123,7 +123,11 @@ The following files will be generated and should be committed:
 
 ## License
 
-MIT
+This project is licensed under the **MIT License**.  
+See the [`LICENSE`](./LICENSE) file for details.
+
+© 2025 JUNG JE KIM  
+Original author and maintainer: [JUNG JE KIM](https://github.com/key824999)
 
 ## Author
 
