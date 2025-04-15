@@ -172,7 +172,7 @@ This will:
 
 The following files will be generated and should be committed:
 
-- `libs/mcp-math-0.0.1-SNAPSHOT.jar`
+- `libs/MCP-Math-0.0.1-SNAPSHOT.jar`
 - `manifest.json`
 
 ## License
