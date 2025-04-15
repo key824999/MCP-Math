@@ -15,6 +15,10 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 
 ## Installation
 
+### ☕ Java Requirements
+
+MCP-Math requires **Java 21 or higher** to run properly.
+
 ### 🔹 For Claude Desktop Users
 
 1. Open your `claude_desktop_config.json` file and add the following configuration:
