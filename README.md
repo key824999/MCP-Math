@@ -48,14 +48,16 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 >   "mcpServers": {
 >     "mcp-math": {
 >       "command": "java",
->         "args": [
->           "-jar",
->           "https://github.com/key824999/MCP-Math/releases/download/v0.1.0/mcp-math.jar"
->         ]
+>       "args": [
+>         "-jar",
+>         "https://github.com/key824999/MCP-Math/releases/download/v0.1.0/mcp-math.jar"
+>       ]
 >     },
 >     "another-mcp-server": {
 >       "command": "python",
->       "args": ["another-tool.py"]
+>       "args": [
+>         "another-tool.py"
+>       ]
 >     }
 >   }
 > }
