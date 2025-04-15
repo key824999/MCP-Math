@@ -10,6 +10,10 @@ public class BasicMathTool {
 
     @Tool(description = "Returns the square root of the given number. For example, sqrt(9) returns 3.")
     public double sqrt(double num) {
+        if (num < 0) {
+            throw new IllegalArgumentException("Cannot take sqrt of negative number");
+        }
+
         return Math.sqrt(num);
     }
 
@@ -30,11 +34,19 @@ public class BasicMathTool {
 
     @Tool(description = "Returns the natural logarithm (base e) of a number. For example, log(2.718) returns approximately 1.")
     public double log(double num) {
+        if (num <= 0) {
+            throw new IllegalArgumentException("Logarithm undefined for zero or negative numbers");
+        }
+
         return Math.log(num);
     }
 
     @Tool(description = "Returns the base-10 logarithm of a number. For example, log10(100) returns 2.")
     public double log10(double num) {
+        if (num <= 0) {
+            throw new IllegalArgumentException("Logarithm undefined for zero or negative numbers");
+        }
+
         return Math.log10(num);
     }
 

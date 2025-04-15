@@ -62,7 +62,7 @@ public class ManifestGenerator {
         mapper.writerWithDefaultPrettyPrinter()
                 .writeValue(new File("manifest.json"), manifest);
 
-        System.out.println("✅ manifest.json generated successfully!");
+        System.out.println("-> manifest.json generated successfully!");
     }
 
     private static String mapType(Class<?> type) {
