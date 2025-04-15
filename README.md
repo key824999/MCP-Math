@@ -4,6 +4,15 @@
 
 It is designed to be used by any AI agent or tool host that supports the MCP specification.
 
+### ⚡ Fast, Accurate, and Lightweight
+MCP-Math is engineered to deliver **fast execution**, **mathematically accurate results**, and **minimal resource overhead**. Each function is finely tuned to ensure:
+
+- **High performance** even at scale (verified with performance tests)
+- **Reliable outputs** with well-tested edge case handling
+- **Minimal dependencies** for fast loading and lightweight deployment
+
+---
+
 ## Features by Category
 
 ### 📘 Basic Math
