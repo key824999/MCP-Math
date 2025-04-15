@@ -11,6 +11,8 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 - **Reliable outputs** with well-tested edge case handling
 - **Minimal dependencies** for fast loading and lightweight deployment
 
+---
+
 ## Features by Category
 
 ### 📘 Basic Math
@@ -66,21 +68,14 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 - `nthTriangularNumber(int n)` – Triangular number
 
 ### 📐 Geometry
-#### Circle
 - `circleArea(double radius)` – Circle area
 - `circleCircumference(double radius)` – Circle circumference
-
-#### Triangle
 - `triangleArea(double base, double height)` – Triangle area (base/height)
 - `trianglePerimeter(double a, double b, double c)` – Triangle perimeter
 - `heronArea(double a, double b, double c)` – Triangle area (Heron's formula)
 - `pythagorean(double a, double b)` – Hypotenuse (Pythagorean theorem)
-
-#### Rectangle
 - `rectangleArea(double width, double height)` – Rectangle area
 - `rectanglePerimeter(double width, double height)` – Rectangle perimeter
-
-#### Coordinates
 - `distance2D(double x1, double y1, double x2, double y2)` – 2D distance
 - `distance3D(double x1, double y1, double z1, double x2, double y2, double z2)` – 3D distance
 
