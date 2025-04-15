@@ -108,16 +108,16 @@
       "b" : "number"
     }
   }, {
-    "name" : "degToRad",
-    "description" : "Converts degrees to radians. For example, degToRad(180) returns π.",
-    "parameters" : {
-      "degrees" : "number"
-    }
-  }, {
     "name" : "factorial",
     "description" : "Returns the factorial of a non-negative integer. For example, factorial(5) returns 120.",
     "parameters" : {
       "n" : "number"
+    }
+  }, {
+    "name" : "radToDeg",
+    "description" : "Converts radians to degrees. For example, radToDeg(π) returns 180.",
+    "parameters" : {
+      "radians" : "number"
     }
   }, {
     "name" : "lcm",
@@ -127,23 +127,10 @@
       "b" : "number"
     }
   }, {
-    "name" : "radToDeg",
-    "description" : "Converts radians to degrees. For example, radToDeg(π) returns 180.",
+    "name" : "degToRad",
+    "description" : "Converts degrees to radians. For example, degToRad(180) returns π.",
     "parameters" : {
-      "radians" : "number"
-    }
-  }, {
-    "name" : "multiFactorial",
-    "description" : "Returns the k-step factorial of n (multi-factorial). For example, multiFactorial(9, 2) returns 945.",
-    "parameters" : {
-      "n" : "number",
-      "k" : "number"
-    }
-  }, {
-    "name" : "catalanNumber",
-    "description" : "Returns the n-th Catalan number. For example, catalanNumber(3) returns 5.",
-    "parameters" : {
-      "n" : "number"
+      "degrees" : "number"
     }
   }, {
     "name" : "factorial",
@@ -166,33 +153,17 @@
       "r" : "number"
     }
   }, {
-    "name" : "triangleArea",
-    "description" : "Returns the area of a triangle given base and height. For example, triangleArea(10, 5) returns 25.",
+    "name" : "catalanNumber",
+    "description" : "Returns the n-th Catalan number. For example, catalanNumber(3) returns 5.",
     "parameters" : {
-      "base" : "number",
-      "height" : "number"
+      "n" : "number"
     }
   }, {
-    "name" : "trianglePerimeter",
-    "description" : "Returns the perimeter of a triangle given the lengths of its three sides. For example, trianglePerimeter(3, 4, 5) returns 12.",
+    "name" : "multiFactorial",
+    "description" : "Returns the k-step factorial of n (multi-factorial). For example, multiFactorial(9, 2) returns 945.",
     "parameters" : {
-      "a" : "number",
-      "b" : "number",
-      "c" : "number"
-    }
-  }, {
-    "name" : "rectangleArea",
-    "description" : "Returns the area of a rectangle. For example, rectangleArea(4, 5) returns 20.",
-    "parameters" : {
-      "width" : "number",
-      "height" : "number"
-    }
-  }, {
-    "name" : "rectanglePerimeter",
-    "description" : "Returns the perimeter of a rectangle. For example, rectanglePerimeter(4, 5) returns 18.",
-    "parameters" : {
-      "width" : "number",
-      "height" : "number"
+      "n" : "number",
+      "k" : "number"
     }
   }, {
     "name" : "pythagorean",
@@ -202,15 +173,12 @@
       "b" : "number"
     }
   }, {
-    "name" : "distance3D",
-    "description" : "Returns the Euclidean distance between two points in 3D space. For example, distance3D(0, 0, 0, 1, 2, 2) returns 3.",
+    "name" : "trianglePerimeter",
+    "description" : "Returns the perimeter of a triangle given the lengths of its three sides. For example, trianglePerimeter(3, 4, 5) returns 12.",
     "parameters" : {
-      "x1" : "number",
-      "y1" : "number",
-      "z1" : "number",
-      "x2" : "number",
-      "y2" : "number",
-      "z2" : "number"
+      "a" : "number",
+      "b" : "number",
+      "c" : "number"
     }
   }, {
     "name" : "heronArea",
@@ -227,6 +195,17 @@
       "radius" : "number"
     }
   }, {
+    "name" : "distance3D",
+    "description" : "Returns the Euclidean distance between two points in 3D space. For example, distance3D(0, 0, 0, 1, 2, 2) returns 3.",
+    "parameters" : {
+      "x1" : "number",
+      "y1" : "number",
+      "z1" : "number",
+      "x2" : "number",
+      "y2" : "number",
+      "z2" : "number"
+    }
+  }, {
     "name" : "distance2D",
     "description" : "Returns the Euclidean distance between two points in 2D space. For example, distance2D(0, 0, 3, 4) returns 5.",
     "parameters" : {
@@ -236,20 +215,41 @@
       "y2" : "number"
     }
   }, {
+    "name" : "rectanglePerimeter",
+    "description" : "Returns the perimeter of a rectangle. For example, rectanglePerimeter(4, 5) returns 18.",
+    "parameters" : {
+      "width" : "number",
+      "height" : "number"
+    }
+  }, {
+    "name" : "triangleArea",
+    "description" : "Returns the area of a triangle given base and height. For example, triangleArea(10, 5) returns 25.",
+    "parameters" : {
+      "base" : "number",
+      "height" : "number"
+    }
+  }, {
+    "name" : "rectangleArea",
+    "description" : "Returns the area of a rectangle. For example, rectangleArea(4, 5) returns 20.",
+    "parameters" : {
+      "width" : "number",
+      "height" : "number"
+    }
+  }, {
     "name" : "circleCircumference",
     "description" : "Returns the circumference of a circle. For example, circleCircumference(2) returns approximately 12.566.",
     "parameters" : {
       "radius" : "number"
     }
   }, {
-    "name" : "countPrimesUpTo",
-    "description" : "Returns the number of prime numbers from 2 up to n (inclusive). For example, countPrimesUpTo(10) returns 4.",
+    "name" : "primeFactors",
+    "description" : "Returns the list of prime factors of a number. For example, primeFactors(12) returns [2, 2, 3].",
     "parameters" : {
       "n" : "number"
     }
   }, {
-    "name" : "primeFactors",
-    "description" : "Returns the list of prime factors of a number. For example, primeFactors(12) returns [2, 2, 3].",
+    "name" : "countPrimesUpTo",
+    "description" : "Returns the number of prime numbers from 2 up to n (inclusive). For example, countPrimesUpTo(10) returns 4.",
     "parameters" : {
       "n" : "number"
     }
@@ -261,16 +261,22 @@
       "end" : "number"
     }
   }, {
+    "name" : "nextPrime",
+    "description" : "Returns the next prime number greater than the given number. For example, nextPrime(10) returns 11.",
+    "parameters" : {
+      "num" : "number"
+    }
+  }, {
     "name" : "isPrime",
     "description" : "Returns true if the given number is a prime. For example, isPrime(7) returns true.",
     "parameters" : {
       "num" : "number"
     }
   }, {
-    "name" : "nextPrime",
-    "description" : "Returns the next prime number greater than the given number. For example, nextPrime(10) returns 11.",
+    "name" : "sumFibonacci",
+    "description" : "Returns the sum of the first n Fibonacci numbers. For example, sumFibonacci(5) returns 12.",
     "parameters" : {
-      "num" : "number"
+      "n" : "number"
     }
   }, {
     "name" : "arithmeticTerm",
@@ -279,6 +285,12 @@
       "a" : "number",
       "d" : "number",
       "n" : "number"
+    }
+  }, {
+    "name" : "isFibonacci",
+    "description" : "Returns true if the number is a Fibonacci number. For example, isFibonacci(21) returns true.",
+    "parameters" : {
+      "num" : "number"
     }
   }, {
     "name" : "geometricTerm",
@@ -303,20 +315,6 @@
       "n" : "number"
     }
   }, {
-    "name" : "sumFibonacci",
-    "description" : "Returns the sum of the first n Fibonacci numbers. For example, sumFibonacci(5) returns 12.",
-    "parameters" : {
-      "n" : "number"
-    }
-  }, {
-    "name" : "generateGeometricSequence",
-    "description" : "Returns a list containing the first n terms of a geometric sequence. For example, generateGeometricSequence(2, 3, 4) returns [2, 6, 18, 54].",
-    "parameters" : {
-      "a" : "number",
-      "r" : "number",
-      "n" : "number"
-    }
-  }, {
     "name" : "sumArithmeticSeries",
     "description" : "Returns the sum of the first n terms in an arithmetic sequence. For example, sumArithmeticSeries(2, 3, 5) returns 40.",
     "parameters" : {
@@ -333,16 +331,18 @@
       "n" : "number"
     }
   }, {
+    "name" : "generateGeometricSequence",
+    "description" : "Returns a list containing the first n terms of a geometric sequence. For example, generateGeometricSequence(2, 3, 4) returns [2, 6, 18, 54].",
+    "parameters" : {
+      "a" : "number",
+      "r" : "number",
+      "n" : "number"
+    }
+  }, {
     "name" : "nthTriangularNumber",
     "description" : "Returns the n-th triangular number (sum of 1 through n). For example, nthTriangularNumber(5) returns 15.",
     "parameters" : {
       "n" : "number"
-    }
-  }, {
-    "name" : "isFibonacci",
-    "description" : "Returns true if the number is a Fibonacci number. For example, isFibonacci(21) returns true.",
-    "parameters" : {
-      "num" : "number"
     }
   }, {
     "name" : "mode",
@@ -375,6 +375,12 @@
       "numbers" : "any"
     }
   }, {
+    "name" : "standardDeviation",
+    "description" : "Returns the sample standard deviation of the numbers.",
+    "parameters" : {
+      "numbers" : "any"
+    }
+  }, {
     "name" : "variance",
     "description" : "Returns the sample variance of the numbers.",
     "parameters" : {
@@ -383,12 +389,6 @@
   }, {
     "name" : "median",
     "description" : "Returns the median of a list of numbers. For example, median([3, 1, 4, 2, 5]) returns 3.",
-    "parameters" : {
-      "numbers" : "any"
-    }
-  }, {
-    "name" : "standardDeviation",
-    "description" : "Returns the sample standard deviation of the numbers.",
     "parameters" : {
       "numbers" : "any"
     }
