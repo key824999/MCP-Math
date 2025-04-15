@@ -11,8 +11,6 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 - **Reliable outputs** with well-tested edge case handling
 - **Minimal dependencies** for fast loading and lightweight deployment
 
----
-
 ## Installation
 
 ### 🔹 For Claude Desktop Users
@@ -72,8 +70,6 @@ To install this tool using the MCP CLI:
 ```bash
 npx mcp add https://raw.githubusercontent.com/key824999/MCP-Math/refs/heads/master/manifest.json
 ```
-
----
 
 ## Features by Category
 
