@@ -11,8 +11,6 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 - **Reliable outputs** with well-tested edge case handling
 - **Minimal dependencies** for fast loading and lightweight deployment
 
----
-
 ## Features by Category
 
 ### 📘 Basic Math
@@ -86,7 +84,7 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 - `distance2D(double x1, double y1, double x2, double y2)` – 2D distance
 - `distance3D(double x1, double y1, double z1, double x2, double y2, double z2)` – 3D distance
 
-All functions are annotated with `@Tool` and are auto-discovered by MCP hosts.
+> All functions are annotated with `@Tool` and can be auto-discovered by any compliant MCP host at runtime.
 
 ## Installation
 
