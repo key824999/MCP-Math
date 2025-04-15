@@ -1,0 +1,85 @@
+{
+  "tool_name" : "MCP-Math",
+  "version" : "0.0.1",
+  "description" : "A Java-based MCP-compatible tool that provides mathematical operations such as sqrt, pow, log, trig functions, rounding, and more.",
+  "entrypoint" : {
+    "command" : "java",
+    "args" : [ "-jar", "./libs/MCP-Math-0.0.1-SNAPSHOT.jar" ]
+  },
+  "actions" : [ {
+    "name" : "abs",
+    "description" : "Returns the absolute value of a number. For example, abs(-5) returns 5.",
+    "parameters" : {
+      "num" : "number"
+    }
+  }, {
+    "name" : "sin",
+    "description" : "Returns the sine of an angle in radians. For example, sin(Math.PI/2) returns 1.",
+    "parameters" : {
+      "radians" : "number"
+    }
+  }, {
+    "name" : "cos",
+    "description" : "Returns the cosine of an angle in radians. For example, cos(0) returns 1.",
+    "parameters" : {
+      "radians" : "number"
+    }
+  }, {
+    "name" : "tan",
+    "description" : "Returns the tangent of an angle in radians. For example, tan(Math.PI/4) returns approximately 1.",
+    "parameters" : {
+      "radians" : "number"
+    }
+  }, {
+    "name" : "sqrt",
+    "description" : "Returns the square root of the given number. For example, sqrt(9) returns 3.",
+    "parameters" : {
+      "num" : "number"
+    }
+  }, {
+    "name" : "log",
+    "description" : "Returns the natural logarithm (base e) of a number. For example, log(2.718) returns approximately 1.",
+    "parameters" : {
+      "num" : "number"
+    }
+  }, {
+    "name" : "log10",
+    "description" : "Returns the base-10 logarithm of a number. For example, log10(100) returns 2.",
+    "parameters" : {
+      "num" : "number"
+    }
+  }, {
+    "name" : "pow",
+    "description" : "Raises a number to the power of n. For example, pow(2, 3) returns 8.",
+    "parameters" : {
+      "num" : "number",
+      "n" : "number"
+    }
+  }, {
+    "name" : "min",
+    "description" : "Returns the minimum of two numbers. For example, min(10, 15) returns 10.",
+    "parameters" : {
+      "a" : "number",
+      "b" : "number"
+    }
+  }, {
+    "name" : "max",
+    "description" : "Returns the maximum of two numbers. For example, max(10, 15) returns 15.",
+    "parameters" : {
+      "a" : "number",
+      "b" : "number"
+    }
+  }, {
+    "name" : "round",
+    "description" : "Rounds the given number to the nearest integer. For example, round(4.7) returns 5.",
+    "parameters" : {
+      "num" : "number"
+    }
+  }, {
+    "name" : "square",
+    "description" : "Calculates the square of the given number. For example, square(4) returns 16.",
+    "parameters" : {
+      "num" : "number"
+    }
+  } ]
+}

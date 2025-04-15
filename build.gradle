@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.4'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'mcp'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.ai:spring-ai-mcp-server-spring-boot-starter:1.0.0-M6'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.3'
+    implementation 'io.github.classgraph:classgraph:4.8.179'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// Task: generate manifest.json based on @Tool annotations
+tasks.register('generateManifest', JavaExec) {
+    group = 'build'
+    description = 'Generates manifest.json from @Tool annotations'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'mcp.math.ManifestGenerator'
+}
+
+// Task: copy the Spring Boot executable JAR to ./libs for publishing
+tasks.register('copyJarToLibs', Copy) {
+    dependsOn tasks.named('bootJar') // build 순서 보장
+    from(tasks.named('bootJar').flatMap { it.archiveFile }) // 💡 올바른 방식
+    into(layout.projectDirectory.dir("libs"))
+}
+
+// Ensure build also runs manifest generation and jar copy
+tasks.named('build') {
+    dependsOn tasks.named('generateManifest')
+    dependsOn tasks.named('copyJarToLibs')
+}
