@@ -3,6 +3,8 @@ package mcp.math.tool;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Component;
 
+import java.math.BigInteger;
+
 @Component
 public class MathTool {
 
@@ -64,5 +66,55 @@ public class MathTool {
     @Tool(description = "Returns the minimum of two numbers. For example, min(10, 15) returns 10.")
     public double min(double a, double b) {
         return Math.min(a, b);
+    }
+
+    @Tool(description = "Returns a modulo b. For example, mod(10, 3) returns 1.")
+    public double mod(double a, double b) {
+        return a % b;
+    }
+
+    @Tool(description = "Returns the smallest integer greater than or equal to the given number. For example, ceil(4.2) returns 5.")
+    public double ceil(double num) {
+        return Math.ceil(num);
+    }
+
+    @Tool(description = "Returns the greatest integer less than or equal to the given number. For example, floor(4.8) returns 4.")
+    public double floor(double num) {
+        return Math.floor(num);
+    }
+
+    @Tool(description = "Returns the greatest common divisor of two integers. For example, gcd(12, 18) returns 6.")
+    public int gcd(int a, int b) {
+        return BigInteger.valueOf(a).gcd(BigInteger.valueOf(b)).intValue();
+    }
+
+    @Tool(description = "Returns the least common multiple of two integers. For example, lcm(4, 6) returns 12.")
+    public int lcm(int a, int b) {
+        return Math.abs(a * b) / gcd(a, b);
+    }
+
+    @Tool(description = "Converts degrees to radians. For example, degToRad(180) returns π.")
+    public double degToRad(double degrees) {
+        return Math.toRadians(degrees);
+    }
+
+    @Tool(description = "Converts radians to degrees. For example, radToDeg(π) returns 180.")
+    public double radToDeg(double radians) {
+        return Math.toDegrees(radians);
+    }
+
+    @Tool(description = "Returns the factorial of a non-negative integer. For example, factorial(5) returns 120.")
+    public long factorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Factorial only defined for non-negative integers.");
+        }
+
+        long result = 1;
+
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+
+        return result;
     }
 }
