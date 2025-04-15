@@ -26,6 +26,7 @@ public class ManifestGenerator {
 
         ObjectNode entrypoint = manifest.putObject("entrypoint");
         entrypoint.put("command", "java");
+
         ArrayNode argsArray = entrypoint.putArray("args");
         argsArray.add("-jar");
         argsArray.add("./libs/" + TOOL_NAME + "-" + VERSION + "-SNAPSHOT.jar");
@@ -40,8 +41,12 @@ public class ManifestGenerator {
 
             for (ClassInfo classInfo : scanResult.getAllClasses()) {
                 Class<?> clazz = classInfo.loadClass();
+
                 for (Method method : clazz.getDeclaredMethods()) {
-                    if (!method.isAnnotationPresent(Tool.class)) continue;
+                    if (!method.isAnnotationPresent(Tool.class)) {
+                        continue;
+                    }
+
                     Tool tool = method.getAnnotation(Tool.class);
 
                     ObjectNode action = mapper.createObjectNode();
@@ -49,6 +54,7 @@ public class ManifestGenerator {
                     action.put("description", tool.description());
 
                     ObjectNode params = mapper.createObjectNode();
+
                     for (Parameter param : method.getParameters()) {
                         params.put(param.getName(), mapType(param.getType()));
                     }
