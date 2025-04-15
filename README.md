@@ -13,6 +13,66 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 
 ---
 
+## Installation
+
+### 🔹 For Claude Desktop Users
+
+1. Open your `claude_desktop_config.json` file and add the following configuration:
+
+    ```json
+    {
+      "mcpServers": {
+        "mcp-math": {
+          "command": "java",
+          "args": [
+            "-jar",
+            "https://github.com/key824999/MCP-Math/releases/download/v0.1.0/mcp-math.jar"
+          ]
+        }
+      }
+    }
+    ```
+
+2. Restart Claude Desktop or refresh your MCP server list.
+3. You can now use mathematical functions like `sqrt`, `pow`, `mean`, `factorial`, and more directly through Claude.
+
+> ⚠️ **Note for multiple MCP servers**
+>
+> If you're adding more than one MCP server in your `claude_desktop_config.json`,  
+> make sure each server block is separated by a comma `,`.
+>
+> Example:
+>
+> ```json
+> {
+>   "mcpServers": {
+>     "mcp-math": {
+>       "command": "java",
+>         "args": [
+>           "-jar",
+>           "https://github.com/key824999/MCP-Math/releases/download/v0.1.0/mcp-math.jar"
+>         ]
+>     },
+>     "another-mcp-server": {
+>       "command": "python",
+>       "args": ["another-tool.py"]
+>     }
+>   }
+> }
+> ```
+> 
+### 🔹 For MCP CLI Users
+
+> If you have [MCP CLI](https://www.npmjs.com/package/mcp) installed, you can register the tool using the following command:
+
+To install this tool using the MCP CLI:
+
+```bash
+npx mcp add https://raw.githubusercontent.com/key824999/MCP-Math/refs/heads/master/manifest.json
+```
+
+---
+
 ## Features by Category
 
 ### 📘 Basic Math
@@ -80,14 +140,6 @@ MCP-Math is engineered to deliver **fast execution**, **mathematically accurate 
 - `distance3D(double x1, double y1, double z1, double x2, double y2, double z2)` – 3D distance
 
 > ℹ️ All functions are annotated with `@Tool` and can be auto-discovered by any compliant MCP host at runtime.
-
-## Installation
-
-To install this tool using the MCP CLI:
-
-```bash
-npx mcp add https://raw.githubusercontent.com/key824999/MCP-Math/refs/heads/master/manifest.json
-```
 
 ## Usage Examples
 
