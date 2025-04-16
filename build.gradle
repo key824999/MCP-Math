@@ -51,3 +51,7 @@ tasks.named('build') {
     dependsOn tasks.named('generateManifest')
     dependsOn tasks.named('copyJarToLibs')
 }
+
+tasks.named('bootJar') {
+    archiveVersion.set(version)
+}
