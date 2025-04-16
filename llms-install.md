@@ -8,7 +8,7 @@ It includes arithmetic, statistics, combinatorics, sequences, geometry, and prim
 To install and run the server locally:
 
 ```bash
-npx mcp add https://raw.githubusercontent.com/key824999/MCP-Math/main/manifest.json
+npx mcp add https://raw.githubusercontent.com/key824999/MCP-Math/refs/heads/master/manifest.json
 
 git clone https://github.com/key824999/MCP-Math.git
 cd MCP-Math
